@@ -1,0 +1,97 @@
+.barang-list__scroll {
+  overflow-x: auto;
+}
+
+.barang-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.barang-table th,
+.barang-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f0f1f3;
+  font-size: 0.9rem;
+}
+
+.barang-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.barang-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.barang-table__delete {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #fccca5;
+  border-radius: 0.5rem;
+  background-color: #fefaf2;
+  color: #b93b1c;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.barang-table__delete:hover {
+  background-color: #fef1e2;
+}
+
+.barang-table__empty-row td {
+  text-align: center;
+  color: #6b7280;
+  padding: 1.5rem;
+}
+
+/* Below 768px the table collapses into stacked cards, one per row */
+@media (max-width: 767px) {
+  .barang-table thead {
+    display: none;
+  }
+
+  .barang-table,
+  .barang-table tbody,
+  .barang-table tr,
+  .barang-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .barang-table tr {
+    border-bottom: 8px solid #f3f4f6;
+    padding: 0.5rem 0;
+  }
+
+  .barang-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: none;
+    padding: 0.4rem 1rem;
+  }
+
+  .barang-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+    flex-shrink: 0;
+  }
+
+  .barang-table__empty-row td {
+    display: block;
+    text-align: center;
+  }
+
+  .barang-table__empty-row td::before {
+    content: '';
+  }
+}
