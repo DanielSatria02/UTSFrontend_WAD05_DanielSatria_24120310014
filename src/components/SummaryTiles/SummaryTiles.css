@@ -31,6 +31,18 @@
   color: #111827;
 }
 
+.summary-tile__value--star {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: #fee2e2;
+  color: #b42318;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 @media (max-width: 1023px) {
   .summary-tiles {
     grid-template-columns: repeat(2, 1fr);
@@ -40,5 +52,9 @@
 @media (max-width: 480px) {
   .summary-tile__value {
     font-size: 1.4rem;
+  }
+
+  .summary-tile__value--star {
+    font-size: 1.15rem;
   }
 }

@@ -15,7 +15,7 @@ defineProps({
     </div>
     <div class="summary-tile summary-tile--warning">
       <p class="summary-tile__label">Stok Menipis + Habis</p>
-      <p class="summary-tile__value">{{ summary.stokKritis }}</p>
+      <p class="summary-tile__value summary-tile__value--star">{{ summary.stokKritis }}</p>
     </div>
     <div class="summary-tile">
       <p class="summary-tile__label">Jumlah Kategori</p>
