@@ -30,3 +30,15 @@ src/
 ```
 
 Each Vue component has a separate CSS file (`<style scoped src="./Nama.css">`) to keep its markup and styling separate.
+
+## Stock Status Thresholds
+
+Stock status is determined by `jumlah_stok`:
+
+| Status | Condition | Reason |
+|---|---|---|
+| Habis (Out of stock) | `jumlah_stok <= 0` | No units remain available for sale or use. |
+| Menipis (Low stock) | `1 <= jumlah_stok <= 5` | Stock is low and needs attention before it runs out. Five units is used as a minimum safety threshold for jewelry, which may have a slower turnover rate and require more time to restock. |
+| Aman (Sufficient) | `jumlah_stok > 5` | Stock is sufficient to meet short-term needs. |
+
+This logic is centralized in `getStockStatus()` in `src/composables/useBarang.js`, keeping the stock badges (`StockBadge.vue`) and summary-tile calculations consistent.
