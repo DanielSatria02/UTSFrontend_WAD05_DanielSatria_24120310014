@@ -6,6 +6,7 @@ import Toolbar from './components/Toolbar/Toolbar.vue'
 import BarangList from './components/BarangList/BarangList.vue'
 import BarangForm from './components/BarangForm/BarangForm.vue'
 import heroImage from './assets/arianagrandeSwarovski.jpg'
+import swarovskiLogo from './assets/swarovskiLogo.png'
 
 const {
   isLoading,
@@ -33,6 +34,7 @@ onMounted(loadBarang)
   <div class="app">
     <div class="app__hero" :style="{ '--hero-image': `url(${heroImage})` }">
       <header class="app__header">
+        <img class="app__logo" :src="swarovskiLogo" alt="Swarovski logo" />
         <h1>Swarovski Inventory Dashboard</h1>
         <p class="app__subtitle">Do note that we are not affiliated with Swarovski.. #yet ;].</p>
       </header>
